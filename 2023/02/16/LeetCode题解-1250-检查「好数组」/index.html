@@ -390,7 +390,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>220 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>229 Words</span>
         </span>
     
     
@@ -413,7 +413,7 @@
             <div class="article-content markdown-body">
                 <p><a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/check-if-it-is-a-good-array/" >1250. 检查「好数组」 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h4 id="题意">题意</h4>
-<p>​	给定一个正整数数组 <code>nums</code>，你需要从中选出一个子集，然后给子集中的每一个数都乘以一个任意数（每个数可以乘的数可以不同，然后求出它们的和，如果和的结果为 <code>1</code>，则认为原数组是一个 <strong>好数组</strong>，如果是则返回 <code>true</code> 否则返回 <code>false</code>。</p>
+<p>给定一个正整数数组 <code>nums</code>，你需要从中选出一个子集，然后给子集中的每一个数都乘以一个任意数（每个数可以乘的数可以不同，然后求出它们的和，如果和的结果为 <code>1</code>，则认为原数组是一个 <strong>好数组</strong>，如果是则返回 <code>true</code> 否则返回 <code>false</code>。</p>
 <h4 id="题解">题解</h4>
 <p>涉及知识点：</p>
 <ul>
@@ -421,6 +421,7 @@
 <li>最大公约数</li>
 </ul>
 <p>由”n 个整数间的裴蜀定理”可知若这个数组中所有数的最大公约数为 1，则这个数组是一个好数组</p>
+<p>时间复杂度：$O(n\log{n})$</p>
 <h4 id="代码">代码</h4>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">isGoodArray</span><span class="params">(<span class="type">int</span>[] nums)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">x</span> <span class="operator">=</span> nums[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> num : nums) &#123;</span><br><span class="line">            x = gcd(x, num);</span><br><span class="line">            <span class="keyword">if</span> (x == <span class="number">1</span>) <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> x == <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">gcd</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> b == <span class="number">0</span> ? a : gcd(b, a % b);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
 
@@ -463,6 +464,21 @@
 
             
                 <div class="article-nav">
+                    
+                        <div class="article-prev">
+                            <a class="prev"
+                            rel="prev"
+                            href="/2023/02/22/LeetCode%E9%A2%98%E8%A7%A3-1326-%E7%81%8C%E6%BA%89%E8%8A%B1%E5%9B%AD%E7%9A%84%E6%9C%80%E5%B0%91%E6%B0%B4%E9%BE%99%E5%A4%B4%E6%95%B0%E7%9B%AE/"
+                            >
+                                <span class="left arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </span>
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">LeetCode题解-1326. 灌溉花园的最少水龙头数目</span>
+                                    <span class="post-nav-item">Prev posts</span>
+                                </span>
+                            </a>
+                        </div>
                     
                     
                         <div class="article-next">
