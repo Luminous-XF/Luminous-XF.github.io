@@ -66,7 +66,119 @@
     
     
     
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -324,7 +436,7 @@
                         <div class="author">
                             <span class="name">Luminous</span>
                             
-                                <span class="author-label">Lv1</span>
+                                <span class="author-label">Lv2</span>
                             
                         </div>
                         <div class="meta-info">
@@ -366,7 +478,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>502 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>500 Words</span>
         </span>
     
     
@@ -412,7 +524,7 @@
 <li>若信息校验有误则向前端返回相关错误信息，前端页面在信息有误的对应输入框提示错误文案</li>
 <li>若信息校验通过则为该用户颁发登录凭证，并向前端返回登录成功信息</li>
 </ul>
-<p>5、登录成功后将页面导航最右端的&quot;登录&quot;按钮更改为用户头像，表示该用户已经登录</p>
+<p>5、登录成功后将页面导航最右端的"登录"按钮更改为用户头像，表示该用户已经登录</p>
 <p>6、用户登录后点击导航右端的头像会显示用户相关操作的菜单，在菜单中可以点击退出登录，当用户点击退出登录后前端会将用户导航处的用户头像更改为登录按钮，后端将用户登录凭证更改为失效</p>
 <h3 id="功能实现">功能实现</h3>
 <h3 id="登录-v2">登录</h3>

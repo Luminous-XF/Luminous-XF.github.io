@@ -66,7 +66,119 @@
     
     
     
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 6.3.0"><style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style></head>
 
 
 <body>
@@ -324,7 +436,7 @@
                         <div class="author">
                             <span class="name">Luminous</span>
                             
-                                <span class="author-label">Lv1</span>
+                                <span class="author-label">Lv2</span>
                             
                         </div>
                         <div class="meta-info">
@@ -382,7 +494,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>392 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>386 Words</span>
         </span>
     
     
@@ -403,33 +515,18 @@
             
 
             <div class="article-content markdown-body">
-                <p><a class="link"   target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-taps-to-open-to-water-a-garden/" >1326. 灌溉花园的最少水龙头数目 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
+                <p><a class="link" target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-number-of-taps-to-open-to-water-a-garden/">1326. 灌溉花园的最少水龙头数目 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
 <h4 id="题意">题意</h4>
-<p>在一个一维坐标上有 n + 1 个点，从 0 点开始，到 n 点结束。在这 n + 1 个点的位置上都有一个&quot;水龙头&quot;，第 i 个点上的水龙头的覆盖范围为 [i - ranges[i], i + ranges[i]] 。现在需要求出覆盖着 n + 1 个点最少需要几个水龙头。</p>
+<p>在一个一维坐标上有 n + 1 个点，从 0 点开始，到 n 点结束。在这 n + 1 个点的位置上都有一个"水龙头"，第 i 个点上的水龙头的覆盖范围为 [i - ranges[i], i + ranges[i]] 。现在需要求出覆盖着 n + 1 个点最少需要几个水龙头。</p>
 <h4 id="题解">题解</h4>
-<p>可以将每个水龙头的覆盖范围理解为一个&quot;线段&quot;，然后求覆盖 [0, n + 1] 这个区间最少需要几条线段。其中需要注意，[1, 1]，[2, 2]这两条线段&quot;<strong>不相交</strong>&quot;，也就是说如果这个水龙头的 ranges[i] 为 0 那么啥也不是，自己都浇不了！</p>
+<p>可以将每个水龙头的覆盖范围理解为一个"线段"，然后求覆盖 [0, n + 1] 这个区间最少需要几条线段。其中需要注意，[1, 1]，[2, 2]这两条线段"<strong>不相交</strong>"，也就是说如果这个水龙头的 ranges[i] 为 0 那么啥也不是，自己都浇不了！</p>
 <p>假设一个线段的表示为 M，其覆盖范围为[l, r] ，先来考虑简单的相邻两个线段覆盖区间的情况：</p>
 <p>1、两个线段不相交</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/Luminous-XF/NoteImages/main/image-20230222194553572.png"
-                      alt="image-20230222194553572"
-                ></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Luminous-XF/NoteImages/main/image-20230222194553572.png" alt="image-20230222194553572"></p>
 <p>对于这种情况线段 M2 一定不会被选，因为两个线段间存在未被覆盖的区间，若想着段未被覆盖的区间被覆盖一定是在线段 M2之后存在覆盖区间小于 M1.R 的线段，此时线段 M2 会被这个线段完全覆盖(参考情况 3)，那么选 M2 就是多余的</p>
 <p>2、两个线段相交重叠</p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/Luminous-XF/NoteImages/main/image-20230222194929275.png"
-                      alt="image-20230222194929275"
-                ></p>
-<p><img  
-                     lazyload
-                     src="/images/loading.svg"
-                     data-src="https://raw.githubusercontent.com/Luminous-XF/NoteImages/main/image-20230222195140274.png"
-                      alt="image-20230222195140274"
-                ></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Luminous-XF/NoteImages/main/image-20230222194929275.png" alt="image-20230222194929275"></p>
+<p><img lazyload="" src="/images/loading.svg" data-src="https://raw.githubusercontent.com/Luminous-XF/NoteImages/main/image-20230222195140274.png" alt="image-20230222195140274"></p>
 <p>若想区间被完全覆盖，那么相邻两个线段之间的关系一定都是这样的最终才是最优的</p>
 <p>3、两个线段存在覆盖</p>
 
