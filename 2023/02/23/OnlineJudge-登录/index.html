@@ -478,7 +478,7 @@ mjx-container[display="true"] + br {
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>500 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>66 Words</span>
         </span>
     
     
@@ -499,35 +499,12 @@ mjx-container[display="true"] + br {
             
 
             <div class="article-content markdown-body">
-                <h2 id="项目背景与概要">项目背景与概要</h2>
-<p>1、在注册功能后补充用户登录功能;</p>
-<p>2、维持用户登录态，不用频繁鉴权登录;</p>
-<h2 id="项目目标与效果">项目目标与效果</h2>
+                <h2 id="目标与效果">目标与效果</h2>
 <p>1、用户可以使用已注册的账号进行登录操作;</p>
 <p>2、用户登录后应在一定时间内维持登录态;</p>
 <p>3、用户登录后可以按需进行退出登录操作;</p>
-<h2 id="功能需求">功能需求</h2>
-<h3 id="核心逻辑">核心逻辑</h3>
-<h4 id="登录">登录</h4>
-<p>1、进入登录页面</p>
-<p>2、输入账号、密码、验证码</p>
-<p>3、点击登录按钮</p>
-<ul>
-<li>此时前端页面在表单发送前通过JS代码对用户输入的信息进行校验</li>
-<li>校验用户名是否为空、用户名是否合法、密码是否为空、密码是否合法、验证码是否为空、验证码是否合法</li>
-<li>若信息校验有误则表单不会发送，并在页面信息有误的输入框提示相关错误文案</li>
-</ul>
-<p>4、前端信息校验通过后登录信息表单会发送到后端</p>
-<ul>
-<li>后端收到登录信息表单后会再次进行用户信息校验</li>
-<li>校验用户账户是否已经注册、账户激活状态、封禁状态</li>
-<li>若信息校验有误则向前端返回相关错误信息，前端页面在信息有误的对应输入框提示错误文案</li>
-<li>若信息校验通过则为该用户颁发登录凭证，并向前端返回登录成功信息</li>
-</ul>
-<p>5、登录成功后将页面导航最右端的"登录"按钮更改为用户头像，表示该用户已经登录</p>
-<p>6、用户登录后点击导航右端的头像会显示用户相关操作的菜单，在菜单中可以点击退出登录，当用户点击退出登录后前端会将用户导航处的用户头像更改为登录按钮，后端将用户登录凭证更改为失效</p>
-<h3 id="功能实现">功能实现</h3>
-<h3 id="登录-v2">登录</h3>
+<h2 id="功能实现">功能实现</h2>
+<h3 id="登录">登录</h3>
 
             </div>
 
@@ -609,7 +586,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">OnlineJudge-登录</div>
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF%E4%B8%8E%E6%A6%82%E8%A6%81"><span class="nav-text">项目背景与概要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A1%B9%E7%9B%AE%E7%9B%AE%E6%A0%87%E4%B8%8E%E6%95%88%E6%9E%9C"><span class="nav-text">项目目标与效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E9%9C%80%E6%B1%82"><span class="nav-text">功能需求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E9%80%BB%E8%BE%91"><span class="nav-text">核心逻辑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%99%BB%E5%BD%95"><span class="nav-text">登录</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="nav-text">功能实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95-v2"><span class="nav-text">登录</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%9B%AE%E6%A0%87%E4%B8%8E%E6%95%88%E6%9E%9C"><span class="nav-text">目标与效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="nav-text">功能实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95"><span class="nav-text">登录</span></a></li></ol></li></ol>
 
     </div>
 </div>
