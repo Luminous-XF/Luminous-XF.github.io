@@ -515,15 +515,15 @@ mjx-container[display="true"] + br {
             
 
             <div class="article-content markdown-body">
-                <p><a class="link" target="_blank" rel="noopener" href="https://leetcode.cn/problems/make-array-zero-by-subtracting-equal-amounts/">2357. 使数组中所有元素都等于零 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></p>
-<h4 id="题意">题意</h4>
+                <h4 id="🎯2357-使数组中所有元素都等于零-力扣（LeetCode）">🎯<a class="link" target="_blank" rel="noopener" href="https://leetcode.cn/problems/make-array-zero-by-subtracting-equal-amounts/">2357. 使数组中所有元素都等于零 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h4>
+<h4 id="📖题意">📖题意</h4>
 <p>有一个非负整数数组 nums，可以进行如下两个操作</p>
 <ul>
 <li>选一个正整数 x，x 是 nums 中最小的正整数</li>
 <li>将 nums 中所有的正整数减去 x</li>
 </ul>
 <p>求将 nums 中所有元素变为 0 需要最少的操作数</p>
-<h4 id="题解">题解</h4>
+<h4 id="💡题解">💡题解</h4>
 <p>考虑几个简单的情况</p>
 <p>[1], 需要 1 次操作</p>
 <ul>
@@ -545,7 +545,7 @@ mjx-container[display="true"] + br {
 <li>x = 1, [0, 0, 1] =&gt; [0, 0, 0]</li>
 </ul>
 <p>可以发现其实每次操作都是将最小的<strong>那些数</strong>变为 0，所以统计一下 nums 中除 0 外有多少种数</p>
-<h4 id="代码">代码</h4>
+<h4 id="📝代码">📝代码</h4>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> {</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">minimumOperations</span><span class="params">(<span class="type">int</span>[] nums)</span> {</span><br><span class="line">        <span class="type">boolean</span>[] book = <span class="keyword">new</span> <span class="title class_">boolean</span>[<span class="number">101</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> x : nums) book[x] = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">        <span class="type">int</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">1</span>; i &lt; <span class="number">101</span>; i++) <span class="keyword">if</span> (book[i]) ans++;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
             </div>
@@ -603,10 +603,10 @@ mjx-container[display="true"] + br {
                         <div class="article-next">
                             <a class="next"
                             rel="next"
-                            href="/2023/02/23/OnlineJudge/"
+                            href="/2023/02/22/LeetCode%E9%A2%98%E8%A7%A3-1326-%E7%81%8C%E6%BA%89%E8%8A%B1%E5%9B%AD%E7%9A%84%E6%9C%80%E5%B0%91%E6%B0%B4%E9%BE%99%E5%A4%B4%E6%95%B0%E7%9B%AE/"
                             >
                                 <span class="title flex-center">
-                                    <span class="post-nav-title-item">OnlineJudge</span>
+                                    <span class="post-nav-title-item">LeetCode题解-1326. 灌溉花园的最少水龙头数目</span>
                                     <span class="post-nav-item">Next posts</span>
                                 </span>
                                 <span class="right arrow-icon flex-center">
@@ -628,7 +628,7 @@ mjx-container[display="true"] + br {
     <div class="post-toc">
         <div class="toc-title">On this page</div>
         <div class="page-title">LeetCode题解-2357. 使数组中所有元素都等于零</div>
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E6%84%8F"><span class="nav-text">题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A2%98%E8%A7%A3"><span class="nav-text">题解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81"><span class="nav-text">代码</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%F0%9F%8E%AF2357-%E4%BD%BF%E6%95%B0%E7%BB%84%E4%B8%AD%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0%E9%83%BD%E7%AD%89%E4%BA%8E%E9%9B%B6-%E5%8A%9B%E6%89%A3%EF%BC%88LeetCode%EF%BC%89"><span class="nav-text">🎯2357. 使数组中所有元素都等于零 - 力扣（LeetCode） </span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%F0%9F%93%96%E9%A2%98%E6%84%8F"><span class="nav-text">📖题意</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%F0%9F%92%A1%E9%A2%98%E8%A7%A3"><span class="nav-text">💡题解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%F0%9F%93%9D%E4%BB%A3%E7%A0%81"><span class="nav-text">📝代码</span></a></li></ol>
 
     </div>
 </div>
