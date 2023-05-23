@@ -371,7 +371,7 @@ body {
   background: var(--background-color);
   font-family: Noto Sans, Noto Sans SC, Open Sans, -apple-system, system-ui, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial;
   font-weight: 400;
-  font-size: 15.2px;
+  font-size: 18px;
   line-height: 22px;
 }
 html::-webkit-scrollbar,
@@ -382,14 +382,14 @@ body::-webkit-scrollbar {
 @media (max-width: 780px) {
   html,
   body {
-    font-size: 14.591999999999999px;
+    font-size: 17.28px;
     line-height: 21.119999999999997px;
   }
 }
 @media (max-width: 500px) {
   html,
   body {
-    font-size: 13.68px;
+    font-size: 16.2px;
     line-height: 19.8px;
   }
 }
