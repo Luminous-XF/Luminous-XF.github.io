@@ -203,452 +203,209 @@ mjx-container[display="true"] + br {
     <div class="page-main-content">
 
         <div class="page-main-content-top">
-            $logo-title-font-size = 2rem
-$pc-search-icon-font-size = 1.5rem
-$menu-bar-line-height = 2.5px
-$logo-image-box-width = 46px
-
-.menu-wrapper {
-  font-family "Optima Medium", sans-serif
-  width 100%
-  height 100%
-  box-sizing border-box
-  display flex
-  align-items center
-  justify-content center
-  background $nav-color-bg
-  -webkit-backdrop-filter blur(10px)
-  backdrop-filter blur(10px)
-  padding-top $scroll-progress-bar-height
-
-  hover-style(false, 0, 0)
-
-  .menu-content {
-    position relative
-    height 100%
-    width $main-content-width
-    max-width $content-max-width
-    display flex
-    flex-direction row
-    justify-content space-between
-    align-items center
-    z-index $z-index-5
-
-
-    &.has-first-screen {
-      max-width $content-max-width * 1.2
-    }
-
-    +redefine-tablet() {
-      width $main-content-width-tablet
-    }
-
-    +redefine-mobile() {
-      width $main-content-width-mobile
-    }
-
-    .left {
-      display flex
-      align-items center
-      transition-t("transform", "0", "0.2", "linear")
-
-      .menu-shrink & {
-        transform scale(0.72)
-        transform-origin left
-      }
-
-
-      if (hexo-config('base_info.logo_img') && hexo-config('base_info.logo_img') != '') {
-        .logo-image {
-          width $logo-image-box-width
-          height $logo-image-box-width
-          margin-right 8px
-
-
-          +redefine-tablet() {
-            width $logo-image-box-width * 0.9
-            height $logo-image-box-width * 0.9
-          }
-
-          +redefine-mobile() {
-            width $logo-image-box-width * 0.8
-            height $logo-image-box-width * 0.8
-          }
-
-          img {
-            border-radius 6px
-            width 100%
-          }
-        }
-
-      }
-
-      .logo-title {
-        font-size $logo-title-font-size
-        font-family "Optima Bold", sans-serif
-        //letter-spacing 1px
-        line-height 1
-        color var(--first-text-color)
-
-        h1 {
-          margin 0
-          font-size $logo-title-font-size
-          font-family "Optima Bold", sans-serif
-          //letter-spacing 1px
-          line-height 1
-          color var(--first-text-color)
-
-          +redefine-tablet() {
-            font-size $logo-title-font-size * 0.9
-          }
-
-          +redefine-mobile() {
-            font-size $logo-title-font-size * 0.8
-          }
-
-        }
-
-        +redefine-tablet() {
-          font-size $logo-title-font-size * 0.9
-        }
-
-        +redefine-mobile() {
-          font-size $logo-title-font-size * 0.8
-        }
-      }
-
-    }
-
-
-    .right {
-
-      .pc {
-
-        .menu-list {
-          display flex
-          align-items center
-          
-
-          +redefine-tablet() {
-            display none
-          }
-
-
-          .menu-item {
-            float left
-            //padding 5px
-            position relative
-            margin-left 30px
-            font-size 1rem
-            cursor pointer
-            color var(--default-text-color)
-
-            a {
-              display block
-              padding 5px
-            }
-
-            &:first-child {
-              margin-left 0
-            }
-
-            a .fa-chevron-down{
-              transform rotate(0deg)
-              transition transform 0.3s ease
-            }
-
-            &:hover a .fa-chevron-down{
-              transform rotate(180deg)
-            }
-
-            &:hover .has-dropdown{
-              &::after {
-                display none !important
-              }
-            }
-
-            &:hover a, .active {
-              &::after {
-                content ''
-                position absolute
-                bottom -5px
-                left 50%
-                width 100%
-                height 2px
-                transform translateX(-50%)
-                background var(--primary-color)
-                transition-t("transform, bottom", "0, 0", "0.2, 0.2", "linear, linear")
-
-                .menu-shrink & {
-                  bottom -($menu-shrink-height / 2 - 17)
-                }
-              }
-            }
+            <header class="menu-wrapper">
+    
+    <div class="menu-content">
+        <div class="left">
             
+            <a class="logo-title" href="/">
+                
+                Luminous の 部落格
+                
+            </a>
+        </div>
+
+        <div class="right">
+            <!-- PC -->
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-house"></i>
+                                        
+                                        HOME
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/categories"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-grid-2"></i>
+                                        
+                                        CATEGORIES
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/tags"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-tag"></i>
+                                        
+                                        TAGS
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/archives"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-archive"></i>
+                                        
+                                        ARCHIVES
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                        
+                            <li class="menu-item">
+                                <!-- Menu -->
+                                <a class="" 
+                                    href="/about"  >
+                                    
+                                        
+                                            <i class="fa-regular fa-user"></i>
+                                        
+                                        ABOUT
+                                    
+                                </a>
+                                <!-- Submenu -->
+                                
+                            </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <!-- Mobile -->
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fa-solid fa-magnifying-glass"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile drawer -->
+    <div class="menu-drawer">
+        <ul class="drawer-menu-list">
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/"  >
+                             
+                                
+                                    <i class="fa-regular fa-house"></i>
+                                
+                                HOME
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/categories"  >
+                             
+                                
+                                    <i class="fa-regular fa-grid-2"></i>
+                                
+                                CATEGORIES
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/tags"  >
+                             
+                                
+                                    <i class="fa-regular fa-tag"></i>
+                                
+                                TAGS
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/archives"  >
+                             
+                                
+                                    <i class="fa-regular fa-archive"></i>
+                                
+                                ARCHIVES
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
+            
+                
+                    <li class="drawer-menu-item flex-center">
+                        <a class="" 
+                        href="/about"  >
+                             
+                                
+                                    <i class="fa-regular fa-user"></i>
+                                
+                                ABOUT
+                            
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    
             
 
-            &.search {
-              font-size $pc-search-icon-font-size
-              margin-left 26px
+        </ul>
+    </div>
 
-              i {
-                color var(--default-text-color)
-              }
+    <div class="window-mask"></div>
 
-            }
+</header>
 
-            .sub-menu{
-              position absolute;
-              right auto
-              left 50%
-              -webkit-transform translate(-50%, 0)
-              -o-transform translate(-50%, 0)
-              transform translate(-50%, 0)
-              margin-top 0px
-              width auto
-              text-align: center;
-              list-style:none;
-              padding 0 10px 
-              border-radius $redefine-border-radius-large
-              //visibility hidden
-              
-
-              max-height 0px
-              overflow hidden
-              transition-t("all", "0", "0.2", "linear") 
-
-              li a {
-                white-space nowrap
-                color var(--default-text-color)
-                font-size 1rem
-                padding 3px 15px
-                display block
-                text-align center
-                border-radius 8px
-                transition-t("all", "0", "0.2", "linear")
-
-                &:hover {
-                  color var(--primary-color)
-                  background-color var(--third-background-color)
-                }
-              }
-            }
-
-          }
-
-        }
-
-        .menu-list .menu-item:hover .sub-menu{
-          //visibility visible
-          max-height 500px
-          transition-t("all", "0", "0.2", "ease")
-          redefine-container(false, 0, 0, 10px, 5px)
-        }
-        
-      }
-
-
-      .mobile {
-        display flex
-        justify-content space-between
-        align-items center
-
-        .icon-item {
-          display none
-          position relative
-          cursor pointer
-          font-size 18px
-          margin-left 12px
-          width 20px
-          height 20px
-          color var(--default-text-color)
-
-          i {
-            color var(--default-text-color)
-          }
-
-          &:first-child {
-            margin-left 0
-          }
-
-          +redefine-tablet() {
-            display flex
-            justify-content center
-            align-items center
-          }
-        }
-
-        .menu-bar {
-
-          .menu-bar-middle {
-            width 18px
-            height $menu-bar-line-height
-            position relative
-            background var(--default-text-color)
-
-            .menu-drawer-show & {
-              background transparent
-            }
-
-
-            &::before, &::after {
-              content ''
-              position absolute
-              left 0
-              width 100%
-              height $menu-bar-line-height
-              background var(--default-text-color)
-              transition-t("transform", "0", "0.38", "ease")
-            }
-
-
-            &::before {
-              top -6px
-
-              .menu-drawer-show & {
-                transform translateY(6px) rotate(45deg)
-              }
-            }
-
-
-            &::after {
-              bottom -6px
-
-              .menu-drawer-show & {
-                transform translateY(-6px) rotate(-45deg)
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-  .menu-drawer {
-    width 100%
-    padding $menu-height 0 20px 0
-    position absolute
-    top 0
-    left 0
-    transform scaleY(0)
-    transform-origin top
-    z-index $z-index-2
-    background var(--background-color)
-    transition-t("transform", "0", "0.38", "ease")
-
-    .menu-drawer-show & {
-      transform scaleY(1)
-    }
-
-    .drawer-menu-list {
-      display flex
-      flex-direction column
-      justify-content flex-start
-      align-items center
-
-      .drawer-menu-item {
-        font-family: "Optima Bold", sans-serif
-        font-size 1rem
-        margin 6px 0
-        height 32px
-
-        a {
-          padding 6px 20px
-          border-radius 20px
-          color var(--default-text-color)
-
-          &:hover {
-            color var(--second-text-color)
-            border 1px solid var(--default-text-color)
-          }
-
-
-          &.active {
-            border 1px solid var(--default-text-color)
-            color var(--second-text-color)
-          }
-        }
-
-        .has-dropdown {
-          font-family: "Optima Bold", sans-serif
-        }
-
-        a .fa-chevron-down{
-          transform rotate(0deg)
-          transition transform 0.3s ease
-        }
-
-        &:hover a .fa-chevron-down{
-          transform rotate(180deg)
-        }
-
-        &:hover .has-dropdown{
-          &::after {
-            display none !important
-          }
-        }
-      }
-
-      .dropdown-item {
-        font-size 1rem
-        margin 6px 0
-        height 16px
-
-        a {
-          padding 6px 20px
-          border-radius 20px
-          color var(--default-text-color)
-
-          &:hover {
-            color var(--second-text-color)
-            border 1px solid var(--default-text-color)
-          }
-
-
-          &.active {
-            border 1px solid var(--default-text-color)
-            color var(--second-text-color)
-          }
-        }
-      }
-
-      .sub-menu{
-        position relative
-        margin-top 8px
-        width 100%
-        text-align: center;
-        list-style: none;
-        padding 0 10px 
-        border-radius $redefine-border-radius-large
-        //float left
-      }
-    }
-  }
-
-
-  .window-mask {
-    position absolute
-    top 0
-    width 100%
-    height 100vh
-    background rgba(0, 0, 0, 0.4)
-    z-index $z-index-1
-    visibility hidden
-    opacity 0
-    transition-t("transform, opacity", "0, 0", "0.38, 0.38", "ease, ease")
-
-    .menu-drawer-show & {
-      visibility visible
-      opacity 1
-    }
-  }
-
-}
-
-.menu-drawer-show {
-  overflow hidden
-}
 
         </div>
 
@@ -737,7 +494,7 @@ $logo-image-box-width = 46px
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fa-regular fa-file-word"></i>&nbsp;<span>373 Words</span>
+            <i class="fa-regular fa-file-word"></i>&nbsp;<span>389 Words</span>
         </span>
     
     
@@ -762,7 +519,14 @@ $logo-image-box-width = 46px
 <h4 id="📖题意">📖题意</h4>
 <p>有 n 个元素，每个元素 i 有对应的值 value 和标签 label。现在需要从这 n 个元素中选择一个不超过 numWant 个元素子集，要求子集中不存在超过 useLimit 个元素的标签 label 相同且使子集，求该子集中所有元素值的和最大可以是多少。</p>
 <h4 id="💡题解">💡题解</h4>
+<p>涉及知识点：</p>
+<ul>
+<li>贪心</li>
+<li>排序</li>
+<li>哈希</li>
+</ul>
 <p>想要让取到的值的和最大，那么容易想到在符合 useLimit 和 label 限制的情况下尽可能取 value 大的元素，那么就对所有元素按照 value 的大小降序排序，然后从大到小取元素并在取的过程中用 map 记录某个 label 已取元素的个数，如果某个 label 取的个数超过了 useLimit 则该元素无法取到则直接跳过。</p>
+<p>时间复杂度：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="9.847ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4352.3 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(1918.7,0)"><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(278,0)"></path><path data-c="67" d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z" transform="translate(778,0)"></path></g><g data-mml-node="mo" transform="translate(3196.7,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mi" transform="translate(3363.3,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(3963.3,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p>
 <h4 id="🎯代码">🎯代码</h4>
 <div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> {</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">largestValsFromLabels</span><span class="params">(<span class="type">int</span>[] values, <span class="type">int</span>[] labels, <span class="type">int</span> numWanted, <span class="type">int</span> useLimit)</span> {</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> values.length;</span><br><span class="line">        Pair[] pairs = <span class="keyword">new</span> <span class="title class_">Pair</span>[n];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n; i++) pairs[i] = <span class="keyword">new</span> <span class="title class_">Pair</span>(values[i], labels[i]);</span><br><span class="line"></span><br><span class="line">        Arrays.sort(pairs, <span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;Pair&gt;() {</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(Pair o1, Pair o2)</span> {</span><br><span class="line">                <span class="keyword">if</span> (o1.values != o2.values) <span class="keyword">return</span> o2.values - o1.values;</span><br><span class="line">                <span class="keyword">return</span> o1.labels - o2.labels;</span><br><span class="line">            }</span><br><span class="line">        });</span><br><span class="line"></span><br><span class="line">        HashMap&lt;Integer, Integer&gt; map = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;&gt;();</span><br><span class="line">        <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>, cnt = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n &amp;&amp; cnt &lt; numWanted; i++) {</span><br><span class="line">            <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> i;</span><br><span class="line">            <span class="keyword">while</span> (j &lt; n &amp;&amp; map.getOrDefault(pairs[j].labels, <span class="number">0</span>) &gt;= useLimit) j++;</span><br><span class="line">            <span class="keyword">if</span> (j &lt; n) {</span><br><span class="line">                sum += pairs[j].values;</span><br><span class="line">                cnt++;</span><br><span class="line">                map.merge(pairs[j].labels, <span class="number">1</span>, Integer::sum);</span><br><span class="line">                i = j;</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">class</span> <span class="title class_">Pair</span> {</span><br><span class="line">        <span class="type">int</span> values;</span><br><span class="line">        <span class="type">int</span> labels;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">public</span> <span class="title function_">Pair</span><span class="params">(<span class="type">int</span> values, <span class="type">int</span> labels)</span> {</span><br><span class="line">            <span class="built_in">this</span>.values = values;</span><br><span class="line">            <span class="built_in">this</span>.labels = labels;</span><br><span class="line">        }</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
