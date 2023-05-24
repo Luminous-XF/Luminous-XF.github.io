@@ -13,19 +13,23 @@
     
     <!--- Seo Part-->
     
-    <link rel="canonical" href="http://example.com/"/>
+    <link rel="canonical" href="http://example.com/2023/05/24/leetcode题解-1377-t-秒后青蛙的位置/"/>
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="1 days">
     
-        <meta name="description" content="Luminous的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Luminous">
-<meta property="og:url" content="http://example.com/index.html">
+        <meta name="description" content="LeetCode题解-1377. T 秒后青蛙的位置，树, DFS, 概率">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode题解-1377-T 秒后青蛙的位置">
+<meta property="og:url" content="http://example.com/2023/05/24/LeetCode%E9%A2%98%E8%A7%A3-1377-T-%E7%A7%92%E5%90%8E%E9%9D%92%E8%9B%99%E7%9A%84%E4%BD%8D%E7%BD%AE/index.html">
 <meta property="og:site_name" content="Luminous">
-<meta property="og:description" content="Luminous的博客">
+<meta property="og:description" content="LeetCode题解-1377. T 秒后青蛙的位置，树, DFS, 概率">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-05-24T08:51:08.000Z">
+<meta property="article:modified_time" content="2023-05-24T09:10:36.945Z">
 <meta property="article:author" content="Luminous">
+<meta property="article:tag" content="树">
+<meta property="article:tag" content="概率">
 <meta name="twitter:card" content="summary">
     
     
@@ -37,6 +41,8 @@
     <!--- Page Info-->
     
     <title>
+        
+            LeetCode题解-1377-T 秒后青蛙的位置 -
         
         Luminous の 部落格
     </title>
@@ -210,36 +216,19 @@ mjx-container[display="true"] + br {
 <main class="page-container">
 
     
-        
-
-<div class="home-banner-container flex-center">
-    <div class="content flex-center">
-        <div class="description fade-in-down-animation" >
-          Why sleep long, when forever rest after death! 
-          
-            <p><i id="subtitle"></i></p>
-          
-        </div>
-        
-    </div>
-</div>
-
-
-
-    
 
     <div class="main-content-container">
 
         <div class="main-content-header">
             <header class="navbar-container">
     
-    <div class="navbar-content has-home-banner">
+    <div class="navbar-content">
         <div class="left">
             
             <a class="logo-title" href="/">
-                <h1>
+                
                 Luminous の 部落格
-                </h1>
+                
             </a>
         </div>
 
@@ -251,7 +240,7 @@ mjx-container[display="true"] + br {
                         
                             <li class="navbar-item">
                                 <!-- Menu -->
-                                <a class="active" 
+                                <a class="" 
                                     href="/"  >
                                     
                                         
@@ -353,7 +342,7 @@ mjx-container[display="true"] + br {
             
                 
                     <li class="drawer-navbar-item flex-center">
-                        <a class="active" 
+                        <a class="" 
                         href="/"  >
                              
                                 
@@ -440,523 +429,210 @@ mjx-container[display="true"] + br {
         <div class="main-content-body">
 
             
-                <div class="home-sidebar-container fade-in-down-animation">
-    <div class="sticky-container">
-        
-            
-            <div class="sidebar-content" >
-                <div class="avatar">
-                    <img src="https://raw.githubusercontent.com/Luminous-XF/NoteImages/main/avatar-hm.jpg">
-                </div>
-                <div class="author">
-                    <div class="name">Luminous</div>
-                    
-                        <div class="label">Lv2</div>
-                    
-                </div>
-                <div class="statistics">
-                    <a class="item" href="/tags">
-                        <div class="number">7</div>
-                        <div class="label">Tags</div>
-                    </a>
-                    <a class="item" href="/categories">
-                        <div class="number">2</div>
-                        <div class="label">Categories</div>
-                    </a>
-                    <a class="item" href="/archives">
-                        <div class="number">8</div>
-                        <div class="label">Posts</div>
-                    </a>
-                </div>
-            </div>
-        
-
-    </div>
-</div>
-
-            
 
             <div class="main-content">
 
                 
-                    <div class="home-content-container fade-in-down-animation">
-    <ul class="home-article-list">
-        
-            <li class="home-article-item">
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container">
+        <div class="article-content-container">
 
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/05/24/LeetCode%E9%A2%98%E8%A7%A3-1377-T-%E7%A7%92%E5%90%8E%E9%9D%92%E8%9B%99%E7%9A%84%E4%BD%8D%E7%BD%AE/">
-                        LeetCode题解-1377-T 秒后青蛙的位置
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        LeetCode题解-1377. T 秒后青蛙的位置，树, DFS, 概率
-                    
+            
+            
+                <div class="article-title">
+                    <h1 class="article-title-regular">LeetCode题解-1377-T 秒后青蛙的位置</h1>
                 </div>
+            
+                
+            
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed May 24 2023 16:51:08 GMT+0800">
-                
-                    2023-05-24
-                
-            </span>
+            
+                <div class="article-header">
+                    <div class="avatar">
+                        <img src="https://raw.githubusercontent.com/Luminous-XF/NoteImages/main/avatar-hm.jpg">
+                    </div>
+                    <div class="info">
+                        <div class="author">
+                            <span class="name">Luminous</span>
+                            
+                                <span class="author-label">Lv2</span>
+                            
+                        </div>
+                        <div class="meta-info">
+                            <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fa-regular fa-pen-fancy"></i>&nbsp;
+        <span class="desktop">2023-05-24 16:51:08</span>
+        <span class="mobile">2023-05-24 16:51</span>
+        <span class="hover-info">Created</span>
+    </span>
+    
+        <span class="article-date article-meta-item">
+            <i class="fa-regular fa-wrench"></i>&nbsp;
+            <span class="desktop">2023-05-24 17:10:36</span>
+            <span class="mobile">2023-05-24 17:10</span>
+            <span class="hover-info">Updated</span>
         </span>
-        
-            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%A0%91/">树</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E6%A6%82%E7%8E%87/">概率</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
+    
 
-    <a href="/2023/05/24/LeetCode%E9%A2%98%E8%A7%A3-1377-T-%E7%A7%92%E5%90%8E%E9%9D%92%E8%9B%99%E7%9A%84%E4%BD%8D%E7%BD%AE/">Read more<span class="seo-reader-text">LeetCode题解-1377-T 秒后青蛙的位置</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fa-regular fa-folders"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fa-regular fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/%E6%A0%91/">树</a>&nbsp;
+                    </li>
+                
+                    <li>
+                        | <a href="/tags/%E6%A6%82%E7%8E%87/">概率</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fa-regular fa-typewriter"></i>&nbsp;<span>469 Words</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fa-regular fa-clock"></i>&nbsp;<span>1 Mins</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fa-regular fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
 </div>
 
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/05/23/LeetCode%E9%A2%98%E8%A7%A3-1090-%E5%8F%97%E6%A0%87%E7%AD%BE%E5%BD%B1%E5%93%8D%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/">
-                        LeetCode题解-1090-受标签影响的最大值
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        LeetCode题解-1090.受标签影响的最大值，贪心
-                    
+                        </div>
+                    </div>
                 </div>
+            
 
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue May 23 2023 17:26:27 GMT+0800">
-                
-                    2023-05-23
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
+            <div class="article-content markdown-body">
+                <h4 id="🎯1377-T-秒后青蛙的位置-力扣（LeetCode）">🎯<a class="link" target="_blank" rel="noopener" href="https://leetcode.cn/problems/frog-position-after-t-seconds/">1377. T 秒后青蛙的位置 - 力扣（LeetCode） <i class="fa-regular fa-arrow-up-right-from-square fa-sm"></i></a></h4>
+<h4 id="📖题意">📖题意</h4>
+<p>有一颗无向树，顶点编号为 1 到 n。有一只🐸青蛙从顶点 1 开始起跳，规则如下</p>
+<ul>
+<li>在 1 秒内，青蛙可以从当前节点跳到另一个与它直连且未被访问过的节点</li>
+<li>青蛙无法跳回已经访问过的节点</li>
+<li>如果在当前节点青蛙可以跳到的节点有多个，则跳到其中任意节点的概率都相同</li>
+<li>如果在当前节点青蛙无法再跳到其它节点，则之后的每次跳跃都会停留再原地</li>
+</ul>
+<p>求青蛙在 <strong>t</strong> 秒后位于目标顶点 <strong>target</strong> 的概率</p>
+<h4 id="📝题解">📝题解</h4>
+<p>涉及知识点：</p>
+<ul>
+<li>树</li>
+<li>DFS</li>
+<li>概率</li>
+</ul>
+<p>首先根据输入数据建树，然后对树进行深度优先搜索，并维护跳到当前顶点时剩余的时间。当搜索时当前节点没有后继节点或者剩余时间为 0 时不再继续往下搜索，此时如果当前节点是 target 则返回概率 1 否则返回 0。当子节点返回的概率大于 0 时表示已经找到 target节点，又因为跳到任意节点的概率都相同所以使用返回的概率 p 除以其子节点的个数作为结果。</p>
+<p>时间复杂度：<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="9.847ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 4352.3 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D442" d="M740 435Q740 320 676 213T511 42T304 -22Q207 -22 138 35T51 201Q50 209 50 244Q50 346 98 438T227 601Q351 704 476 704Q514 704 524 703Q621 689 680 617T740 435ZM637 476Q637 565 591 615T476 665Q396 665 322 605Q242 542 200 428T157 216Q157 126 200 73T314 19Q404 19 485 98T608 313Q637 408 637 476Z"></path></g><g data-mml-node="mo" transform="translate(763,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(1152,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mi" transform="translate(1918.7,0)"><path data-c="6C" d="M42 46H56Q95 46 103 60V68Q103 77 103 91T103 124T104 167T104 217T104 272T104 329Q104 366 104 407T104 482T104 542T103 586T103 603Q100 622 89 628T44 637H26V660Q26 683 28 683L38 684Q48 685 67 686T104 688Q121 689 141 690T171 693T182 694H185V379Q185 62 186 60Q190 52 198 49Q219 46 247 46H263V0H255L232 1Q209 2 183 2T145 3T107 3T57 1L34 0H26V46H42Z"></path><path data-c="6F" d="M28 214Q28 309 93 378T250 448Q340 448 405 380T471 215Q471 120 407 55T250 -10Q153 -10 91 57T28 214ZM250 30Q372 30 372 193V225V250Q372 272 371 288T364 326T348 362T317 390T268 410Q263 411 252 411Q222 411 195 399Q152 377 139 338T126 246V226Q126 130 145 91Q177 30 250 30Z" transform="translate(278,0)"></path><path data-c="67" d="M329 409Q373 453 429 453Q459 453 472 434T485 396Q485 382 476 371T449 360Q416 360 412 390Q410 404 415 411Q415 412 416 414V415Q388 412 363 393Q355 388 355 386Q355 385 359 381T368 369T379 351T388 325T392 292Q392 230 343 187T222 143Q172 143 123 171Q112 153 112 133Q112 98 138 81Q147 75 155 75T227 73Q311 72 335 67Q396 58 431 26Q470 -13 470 -72Q470 -139 392 -175Q332 -206 250 -206Q167 -206 107 -175Q29 -140 29 -75Q29 -39 50 -15T92 18L103 24Q67 55 67 108Q67 155 96 193Q52 237 52 292Q52 355 102 398T223 442Q274 442 318 416L329 409ZM299 343Q294 371 273 387T221 404Q192 404 171 388T145 343Q142 326 142 292Q142 248 149 227T179 192Q196 182 222 182Q244 182 260 189T283 207T294 227T299 242Q302 258 302 292T299 343ZM403 -75Q403 -50 389 -34T348 -11T299 -2T245 0H218Q151 0 138 -6Q118 -15 107 -34T95 -74Q95 -84 101 -97T122 -127T170 -155T250 -167Q319 -167 361 -139T403 -75Z" transform="translate(778,0)"></path></g><g data-mml-node="mo" transform="translate(3196.7,0)"><path data-c="2061" d=""></path></g><g data-mml-node="mi" transform="translate(3363.3,0)"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(3963.3,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p>
+<h4 id="💡代码">💡代码</h4>
+<div class="highlight-container" data-rel="Java"><figure class="iseeu highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Solution</span> {</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">frogPosition</span><span class="params">(<span class="type">int</span> n, <span class="type">int</span>[][] edges, <span class="type">int</span> t, <span class="type">int</span> target)</span> {</span><br><span class="line">        ArrayList&lt;Integer&gt;[] G = <span class="keyword">new</span> <span class="title class_">ArrayList</span>[n + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; n + <span class="number">1</span>; i++) G[i] = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span>[] edge : edges) {</span><br><span class="line">            G[edge[<span class="number">0</span>]].add(edge[<span class="number">1</span>]);</span><br><span class="line">            G[edge[<span class="number">1</span>]].add(edge[<span class="number">0</span>]);</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="type">boolean</span>[] vis = <span class="keyword">new</span> <span class="title class_">boolean</span>[n + <span class="number">1</span>];</span><br><span class="line">        <span class="keyword">return</span> dfs(<span class="number">1</span>, t, target, G, vis);</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> <span class="title function_">dfs</span><span class="params">(<span class="type">int</span> from, <span class="type">int</span> t, <span class="type">int</span> target, ArrayList&lt;Integer&gt;[] G, <span class="type">boolean</span>[] vis)</span> {</span><br><span class="line">        <span class="type">int</span> <span class="variable">cnt</span> <span class="operator">=</span> (from == <span class="number">1</span> ? G[from].size() : G[from].size() - <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (cnt == <span class="number">0</span> || t == <span class="number">0</span>) <span class="keyword">return</span> from == target ?  <span class="number">1</span> : <span class="number">0</span>;</span><br><span class="line">        vis[from] = <span class="literal">true</span>;</span><br><span class="line">        <span class="type">double</span> <span class="variable">ans</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> to : G[from]) {</span><br><span class="line">            <span class="keyword">if</span> (!vis[to]) {</span><br><span class="line">                ans += dfs(to, t - <span class="number">1</span>, target, G, vis);</span><br><span class="line">            }</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> ans / cnt;</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></table></figure></div>
 
-    <a href="/2023/05/23/LeetCode%E9%A2%98%E8%A7%A3-1090-%E5%8F%97%E6%A0%87%E7%AD%BE%E5%BD%B1%E5%93%8D%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/">Read more<span class="seo-reader-text">LeetCode题解-1090-受标签影响的最大值</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
+            </div>
 
+            
+                <div class="post-copyright-info">
+                    <div class="article-copyright-info-container">
+    <ul>
+        <li><strong>Title:</strong> LeetCode题解-1377-T 秒后青蛙的位置</li>
+        <li><strong>Author:</strong> Luminous</li>
+        <li><strong>Created at:</strong> 2023-05-24 16:51:08</li>
+        
+            <li>
+                <strong>Updated at:</strong> 2023-05-24 17:10:36
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/02/28/LeetCode%E9%A2%98%E8%A7%A3-2363-%E5%90%88%E5%B9%B6%E7%9B%B8%E4%BC%BC%E7%9A%84%E7%89%A9%E5%93%81/">
-                        LeetCode题解-2363-合并相似的物品
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        LeetCode题解-2363-合并相似的物品,Map,排序
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Tue Feb 28 2023 16:00:49 GMT+0800">
-                
-                    2023-02-28
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E6%8E%92%E5%BA%8F/">排序</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2023/02/28/LeetCode%E9%A2%98%E8%A7%A3-2363-%E5%90%88%E5%B9%B6%E7%9B%B8%E4%BC%BC%E7%9A%84%E7%89%A9%E5%93%81/">Read more<span class="seo-reader-text">LeetCode题解-2363-合并相似的物品</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/02/24/LeetCode%E9%A2%98%E8%A7%A3-2357-%E4%BD%BF%E6%95%B0%E7%BB%84%E4%B8%AD%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0%E9%83%BD%E7%AD%89%E4%BA%8E%E9%9B%B6/">
-                        LeetCode题解-2357. 使数组中所有元素都等于零
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        LeetCode题解-2357. 使数组中所有元素都等于零，贪心、哈希
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Fri Feb 24 2023 15:07:55 GMT+0800">
-                
-                    2023-02-24
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2023/02/24/LeetCode%E9%A2%98%E8%A7%A3-2357-%E4%BD%BF%E6%95%B0%E7%BB%84%E4%B8%AD%E6%89%80%E6%9C%89%E5%85%83%E7%B4%A0%E9%83%BD%E7%AD%89%E4%BA%8E%E9%9B%B6/">Read more<span class="seo-reader-text">LeetCode题解-2357. 使数组中所有元素都等于零</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/02/22/LeetCode%E9%A2%98%E8%A7%A3-1326-%E7%81%8C%E6%BA%89%E8%8A%B1%E5%9B%AD%E7%9A%84%E6%9C%80%E5%B0%91%E6%B0%B4%E9%BE%99%E5%A4%B4%E6%95%B0%E7%9B%AE/">
-                        LeetCode题解-1326. 灌溉花园的最少水龙头数目
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        LeetCode题解-1326. 灌溉花园的最少水龙头数目，贪心
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Feb 22 2023 18:36:23 GMT+0800">
-                
-                    2023-02-22
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%B4%AA%E5%BF%83/">贪心</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2023/02/22/LeetCode%E9%A2%98%E8%A7%A3-1326-%E7%81%8C%E6%BA%89%E8%8A%B1%E5%9B%AD%E7%9A%84%E6%9C%80%E5%B0%91%E6%B0%B4%E9%BE%99%E5%A4%B4%E6%95%B0%E7%9B%AE/">Read more<span class="seo-reader-text">LeetCode题解-1326. 灌溉花园的最少水龙头数目</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/02/16/LeetCode%E9%A2%98%E8%A7%A3-1250-%E6%A3%80%E6%9F%A5%E3%80%8C%E5%A5%BD%E6%95%B0%E7%BB%84%E3%80%8D/">
-                        LeetCode题解-1250. 检查「好数组」
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        LeetCode题解-1250. 检查「好数组」，数论，裴蜀定理
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Thu Feb 16 2023 00:09:03 GMT+0800">
-                
-                    2023-02-16
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/LeetCode%E9%A2%98%E8%A7%A3/">LeetCode题解</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86/">裴蜀定理</a>&nbsp;
-                        </li>
-                    
-                        <li>
-                            | 
-                            <a href="/tags/%E6%95%B0%E8%AE%BA/">数论</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2023/02/16/LeetCode%E9%A2%98%E8%A7%A3-1250-%E6%A3%80%E6%9F%A5%E3%80%8C%E5%A5%BD%E6%95%B0%E7%BB%84%E3%80%8D/">Read more<span class="seo-reader-text">LeetCode题解-1250. 检查「好数组」</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/02/15/Typora-%E6%B7%BB%E5%8A%A0emoji%E8%A1%A8%E6%83%85/">
-                        Typora-添加emoji表情
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        如何在Typora中添加emoji表情
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Wed Feb 15 2023 15:09:16 GMT+0800">
-                
-                    2023-02-15
-                
-            </span>
-        </span>
-        
-            <span class="home-article-category"><i class="fa-solid fa-folders"></i></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/categories/Typora%E4%BD%BF%E7%94%A8/">Typora使用</a>&nbsp;
-                        </li>
-                    
-                    
-                </ul>
-            </span>
-        
-        
-            <span class="home-article-tag">
-                <i class="fa-solid fa-tags"></i>&nbsp;
-                <ul>
-                    
-                        <li>
-                            
-                            <a href="/tags/Typora/">Typora</a>&nbsp;
-                        </li>
-                    
-                </ul>
-            </span>
-        
-    </div>
-
-    <a href="/2023/02/15/Typora-%E6%B7%BB%E5%8A%A0emoji%E8%A1%A8%E6%83%85/">Read more<span class="seo-reader-text">Typora-添加emoji表情</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                
-
-                <h3 class="home-article-title">
-                    <a href="/2023/02/13/hello-world/">
-                        Hello World
-                    </a>
-                </h3>
-
-                <div class="home-article-content markdown-body">
-                    
-                        Welcome to Hexo ! This is your very first post. Check documentation  for more info. If you get any problems when using Hexo, ...
-                    
-                </div>
-
-                <div class="home-article-meta-info-container">
-    <div class="home-article-meta-info">
-        <span><i class="fa-solid fa-calendars"></i>&nbsp;
-            <span class="home-article-date" data-date="Mon Feb 13 2023 16:15:15 GMT+0800">
-                
-                    2023-02-13
-                
-            </span>
-        </span>
-        
-        
-    </div>
-
-    <a href="/2023/02/13/hello-world/">Read more<span class="seo-reader-text">Hello World</span>&nbsp;<i class="fa-solid fa-angle-right"></i></a>
-</div>
-
-            </li>
-        
+        <li>
+            <strong>Link:</strong> https://luminous-xf.github.io/2023/05/24/LeetCode题解-1377-T-秒后青蛙的位置/
+        </li>
+        <li>
+            <strong>License:</strong> This work is licensed under <a class="license" target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>.
+        </li>
     </ul>
-
-    <div class="home-paginator">
-        <div class="paginator">
-    <span class="page-number current">1</span>
 </div>
+
+                </div>
+            
+
+            
+                <ul class="post-tags-box">
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%A0%91/">#树</a>&nbsp;
+                        </li>
+                    
+                        <li class="tag-item">
+                            <a href="/tags/%E6%A6%82%E7%8E%87/">#概率</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            
+
+            
+
+            
+                <div class="article-nav">
+                    
+                    
+                        <div class="article-next">
+                            <a class="next"
+                            rel="next"
+                            href="/2023/05/23/LeetCode%E9%A2%98%E8%A7%A3-1090-%E5%8F%97%E6%A0%87%E7%AD%BE%E5%BD%B1%E5%93%8D%E7%9A%84%E6%9C%80%E5%A4%A7%E5%80%BC/"
+                            >
+                                <span class="title flex-center">
+                                    <span class="post-nav-title-item">LeetCode题解-1090-受标签影响的最大值</span>
+                                    <span class="post-nav-item">Next posts</span>
+                                </span>
+                                <span class="right arrow-icon flex-center">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                    
+                </div>
+            
+
+
+            
+        </div>
+
+        
+            <div class="toc-content-container">
+                <div class="post-toc-wrap">
+    <div class="post-toc">
+        <div class="toc-title">On this page</div>
+        <div class="page-title">LeetCode题解-1377-T 秒后青蛙的位置</div>
+        
 
     </div>
 </div>
+            </div>
+        
+    </div>
+</div>
+
 
                 
 
@@ -1032,6 +708,23 @@ mjx-container[display="true"] + br {
         </div>
     </div>
 
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="article-tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="right-bottom-tools page-aside-toggle">
+                <i class="fa-regular fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
     
 
     <div class="right-side-tools-container">
@@ -1121,7 +814,6 @@ mjx-container[display="true"] + br {
 
 
 
-
 <script src="/js/utils.js"></script>
 
 <script src="/js/main.js"></script>
@@ -1177,6 +869,16 @@ mjx-container[display="true"] + br {
 
 
 <div class="post-scripts pjax">
+    
+        
+<script src="/js/tools/tocToggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/layouts/toc.js"></script>
+
+<script src="/js/plugins/tabs.js"></script>
+
     
 </div>
 
