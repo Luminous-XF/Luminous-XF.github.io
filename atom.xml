@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Luminous-XF.github.io</id>
+    <title>Luminous の 部落格</title>
+    <updated>2024-11-26T08:17:54.073Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://Luminous-XF.github.io"/>
+    <link rel="self" href="https://Luminous-XF.github.io/atom.xml"/>
+    <subtitle>Luminous の 部落格</subtitle>
+    <logo>https://Luminous-XF.github.io/images/avatar.png</logo>
+    <icon>https://Luminous-XF.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2024, Luminous の 部落格</rights>
+    <entry>
+        <title type="html"><![CDATA[Test]]></title>
+        <id>https://Luminous-XF.github.io/post/test/</id>
+        <link href="https://Luminous-XF.github.io/post/test/">
+        </link>
+        <updated>2024-11-25T10:09:50.000Z</updated>
+        <content type="html"><![CDATA[<!-- more -->
+<p>To Do Something！</p>
+<figure data-type="image" tabindex="1"><img src="https://Luminous-XF.github.io/post-images/1732529424147.png" alt="" loading="lazy"></figure>
+<pre><code class="language-C++">//
+// Created by Luminous on 2024/11/1.
+// https://open.kattis.com/problems/ballotboxes
+//
+
+#pragma GCC optimize(3)
+
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+#define endl &quot;\n&quot;
+
+
+const int MAX_N = 5e5 + 10;
+
+int a[MAX_N];
+
+bool check(int n, int m, int k) {
+    for (int i = 0; i &lt; n; i++) {
+        m -= ceil((double) a[i] / k);
+    }
+
+    return m &gt;= 0;
+}
+
+bool solve() {
+    int n, m;
+    cin &gt;&gt; n &gt;&gt; m;
+
+    if (n == -1 &amp;&amp; m == -1) {
+        return false;
+    }
+
+    for (int i = 0; i &lt; n; i++) {
+        cin &gt;&gt; a[i];
+    }
+
+    int left = 0, right = 5e6 + 10;
+    while (left &lt; right) {
+        int mid = left + right &gt;&gt; 1;
+        if (check(n, m, mid)) {
+            right = mid;
+        } else {
+            left = mid + 1;
+        }
+    }
+
+    int ans = right;
+    cout &lt;&lt; ans &lt;&lt; endl;
+
+    return true;
+}
+
+int main() {
+
+    ios::sync_with_stdio(false);
+
+    while (solve());
+
+    return 0;
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://Luminous-XF.github.io/post/hello-gridea/</id>
+        <link href="https://Luminous-XF.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
